@@ -66,10 +66,11 @@ public class PilhaEstatica<T> {
 		 pilha.push(1);
 		 pilha.push(3);
 		 pilha.push(4);
+		 System.out.println("---Pilha---\n");
 		 pilha.print();
-		 pilha.peek();
+		 System.out.println("\nUltimo elemento acrescentado: "+pilha.peek());
 		 pilha.pop();
-		 System.out.println("\n---depois da remoção---\n");
+		 System.out.println("\n---Pilha depois da remoção---\n");
 		 pilha.print();
 	}
 

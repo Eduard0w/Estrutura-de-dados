@@ -76,11 +76,10 @@ public class PilhaEncadeada<T> {
 		pilha.push(2);
 		pilha.push(3);
 		pilha.push(10);
-		pilha.peek();
 		pilha.print();
-		System.out.println("\nRemoção...");
+		System.out.println("\n Ultimo elemento acrescentado "+pilha.peek()+"\n");
 		pilha.pop();
-		System.out.println("\n---Depois da remoção---\n");
+		System.out.println("\n---Pilha depois da remoção---\n");
 		pilha.print();
 
 	}
