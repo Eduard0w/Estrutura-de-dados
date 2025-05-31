@@ -1,34 +1,9 @@
 package pilha;
 
+import no.No;
+
 public class PilhaEncadeada<T> {
 	private No<T> topo; // referencia do topo da pilha, ou seja, seguira o utimo elemento acrescentado.
-	
-	public class No<T> {
-		private T elemento;
-		private No<T> proximo;
-		
-		public No (T elemento) {
-			this.elemento = elemento;
-			this.proximo = null;
-		}
-
-		public T getElemento() {
-			return elemento;
-		}
-
-		public void setElemento(T elemento) {
-			this.elemento = elemento;
-		}
-
-		public No<T> getProximo() {
-			return proximo;
-		}
-
-		public void setProximo(No<T> proximo) {
-			this.proximo = proximo;
-		}
-		
-	}
 	
 	public boolean isVazio() {
 		return this.topo == null;
