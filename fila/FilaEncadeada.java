@@ -8,7 +8,7 @@ public class FilaEncadeada<T> {
 	private int total;
 	
 	public boolean isVazio() {
-		return total == 0;		
+		return inicio == null;		
 	}
 	
 	public int size() {
@@ -43,6 +43,7 @@ public class FilaEncadeada<T> {
 	public void print() {
 		if(isVazio()) {
 			System.out.println("Fila está vazia!");
+			return;
 		}
 		
 		No<T> elementos = inicio;
@@ -53,6 +54,15 @@ public class FilaEncadeada<T> {
 		}
 		System.out.println();
 	}
+	
+	public T peek() {
+		if(isVazio()) {
+			System.out.println("Fila vazia!");
+			return null;
+		}
+
+		return inicio.getElemento();
+	}
 
 	public static void main(String[] args) {
 		FilaEncadeada<Integer> filaE = new FilaEncadeada<Integer>();
@@ -62,10 +72,12 @@ public class FilaEncadeada<T> {
 		filaE.enqueue(3);
 		System.out.println("---Fila inicial---\n");
 		filaE.print();
+		System.out.println("\n---Primeiro elemento da fila: "+filaE.peek());
 		filaE.dequeue();
 		filaE.enqueue(5);
 		System.out.println("\n---Pós remoção---\n");
 		filaE.print();
+		System.out.println("\n---Primeiro elemento da fila: "+filaE.peek());
 
 	}
 
