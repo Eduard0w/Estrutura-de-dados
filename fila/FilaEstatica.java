@@ -15,12 +15,12 @@ public class FilaEstatica<T>{
 		return this.elementos[this.inicio] == null;
 	}
 	
-	public void Enqueue(T elemento) {
+	public void enqueue(T elemento) {
 		this.elementos[this.fim] = elemento;
 		this.fim++;
 	}
 	
-	public void Dequeue() {
+	public void dequeue() {
 		if(isVazio()) {
 			return;
 		}
@@ -50,15 +50,15 @@ public class FilaEstatica<T>{
 	public static void main(String[] args) {
 		FilaEstatica<Integer> fila = new FilaEstatica<>(4);
 		
-		fila.Enqueue(1);
-		fila.Enqueue(2);
-		fila.Enqueue(3);
+		fila.enqueue(1);
+		fila.enqueue(2);
+		fila.enqueue(3);
 		System.out.println("---Fila---\n");
 		fila.print();
-		fila.Dequeue();
+		fila.dequeue();
 		System.out.println("\n---Fila pós remoção---\n");
 		fila.print();
-		fila.Enqueue(4);
+		fila.enqueue(4);
 		System.out.println("\n---Fila pós enfileiramento---\n");
 		fila.print();
 //		fila.PrintInicio();
