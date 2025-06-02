@@ -28,8 +28,16 @@ public class BubbleSort<T> {
 		}
 	}
 	
+	//--------
+	
 	public static void bubbleSortRe(int vetor[], int tamanho) {
-		if (tamanho == 1) return;
+		if (tamanho == 1) {
+			System.out.println("---Bubble sort com recursividade:");
+			for(int k=0; k < vetor.length; k++) {
+				System.out.print(" | "+vetor[k]+" |");
+			}
+			return;
+		}
 		
 		for(int i=0; i<tamanho-1; i++) {//i=0 ; i < 2
 				if(vetor[i] > vetor[i+1]) {//2 > 3 ?
