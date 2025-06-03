@@ -34,17 +34,32 @@ public class InsertSort {
 	}
 	
 	public static void insertSortRe(int[] vetor, int x, int menor) {///trocar nome da variavel x
-		if(x == vetor.length-1) {
+		if(x == vetor.length) {
+			System.out.println("\n---Insert sort com recursividade:");
+			for(int i=0; i<vetor.length; i++) {
+				System.out.print(" | "+vetor[i]+" |");
+			}
 			return;
 		}
 		
-		for(int i=x-1; i>=0; i--) {
-			int valor = vetor[i];
-			if(vetor[i+1] < valor) {
-				menor = valor;
-				int temp = vetor[];
-			}
-		} // TODO terminar de fazer o metodo recursivo
+		menor = vetor[x];
+		int i=x-1;
+//		for(; i>=0; i--) {
+//			if(vetor[i] > menor) {
+//				vetor[i+1] = vetor[i];
+//			}else if (vetor[i] <= menor){
+//				break;
+//			}
+//		}
+//		vetor[i+1] = menor;
+//		
+		//TODO fazer com o loop while();
+		while(i>=0 && vetor[i] > menor) {
+			vetor[i+1] = vetor[i];
+			i--;
+		}
+		
+		vetor[i+1] = menor;
 		
 		insertSortRe(vetor, x+1, menor);
 	}
