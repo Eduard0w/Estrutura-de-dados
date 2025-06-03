@@ -7,6 +7,7 @@ public class BubbleSort<T> {
 		int[] vetor = {2, 3, 1};
 		
 //		bubbleSort(vetor);
+//		System.out.println("\n");
 		bubbleSortRe(vetor, vetor.length);
 	}
 

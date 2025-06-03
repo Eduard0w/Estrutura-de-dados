@@ -6,6 +6,7 @@ public class SelectionSort {
 		int[] vetor = {2, 3, 1};
 		
 //		selectionSort(vetor);
+//		System.out.println("\n");
 		selectionSortRe(vetor, 0);
 	}
 	
@@ -31,7 +32,13 @@ public class SelectionSort {
 	}
 	
 	public static void selectionSortRe(int[] vetor, int inicio) {
-		if(inicio == vetor.length-1) return;
+		if(inicio == vetor.length-1) { 
+			System.out.println("---Selection sort com recursividade:");
+			for(int i=0; i<vetor.length; i++) {
+				System.out.print(" | "+vetor[i]+" |");
+			}
+			return;
+		}
 		
 		int menor = inicio;
 		for(int i=inicio+1; i<vetor.length; i++) {
