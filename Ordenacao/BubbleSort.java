@@ -2,16 +2,6 @@ package Ordenacao;
 
 public class BubbleSort<T> {
 	
-
-	public static void main(String[] args) {
-		int[] vetor = {2, 3, 1};
-		
-//		bubbleSort(vetor);
-//		System.out.println("\n");
-		bubbleSortRe(vetor, vetor.length);
-	}
-
-	
 	public static void bubbleSort(int vetor[]) {
 		for(int i=0; i<vetor.length-1; i++) {//i=0 ; i < 2
 			for(int j=0; j<vetor.length-i-1; j++) {//j=0 ; j < 2
@@ -49,5 +39,14 @@ public class BubbleSort<T> {
 		}
 		
 		bubbleSortRe(vetor, tamanho-1);
+	}
+	
+
+	public static void main(String[] args) {
+		int[] vetor = {2, 3, 1};
+		
+//		bubbleSort(vetor);
+//		System.out.println("\n");
+		bubbleSortRe(vetor, vetor.length);
 	}
 }

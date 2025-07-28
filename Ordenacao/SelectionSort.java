@@ -2,14 +2,6 @@ package Ordenacao;
 
 public class SelectionSort {
 
-	public static void main(String[] args) {
-		int[] vetor = {2, 3, 1};
-		
-//		selectionSort(vetor);
-//		System.out.println("\n");
-		selectionSortRe(vetor, 0);
-	}
-	
 	public static void selectionSort(int[] vetor) {
 		for(int i = 0; i<vetor.length-1; i++) {//i=0 ; i < 2
 			int menor = i; // menor = 2
@@ -54,6 +46,14 @@ public class SelectionSort {
 		}
 		
 		selectionSortRe(vetor, inicio+1);
+	}
+	
+	public static void main(String[] args) {
+		int[] vetor = {2, 3, 1};
+		
+//		selectionSort(vetor);
+//		System.out.println("\n");
+		selectionSortRe(vetor, 0);
 	}
 
 }

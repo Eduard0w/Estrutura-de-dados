@@ -47,8 +47,10 @@ public class QuickSort {
 		
 		System.out.println("Vetor organizado: ");
 		for(int i=0; i< vetor.length; i++) {
-			System.out.print(vetor[i] +", ");
+			System.out.print(vetor[i] +" ");
 		}
+		
+		t.close();
 	}
 
 }
