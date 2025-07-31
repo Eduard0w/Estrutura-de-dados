@@ -49,7 +49,6 @@ public class Arvore<T> {
 		if(isVazio()) {
 			return null;
 		}
-		T elementoFind = null;
 		Root<T> ponteiro = raiz;
 		while(ponteiro != null) {
 			int comparacao = compare.compare(elemento, ponteiro.getElemento());
